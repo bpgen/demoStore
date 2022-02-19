@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: table-checkout
+      author: biswajit
+      changes:
+        - createTable:
+            tableName: checkout
+            columns:
+              - column:
+                  name: checkoutId
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: userId
+                  type: int
+              - column:
+                  name: productCode
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: quantity
+                  type: int

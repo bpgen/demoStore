@@ -1,0 +1,38 @@
+databaseChangeLog:
+  - changeSet:
+      id: table-product
+      author: biswajit
+      changes:
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: productId
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: productCode
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: desc
+                  type: varchar(50)
+              - column:
+                  name: price
+                  type: decimal(10,2)
+              - column:
+                  name: currency
+                  type: varchar(3)
+              - column:
+                  name: quantity
+                  type: int
+              - column:
+                  name: discountDeal
+                  type: varchar(100)
+              - column:
+                  name: bundleDeal
+                  type: varchar(100)

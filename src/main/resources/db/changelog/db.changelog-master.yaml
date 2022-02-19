@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: db/changelog/product.yaml
+  - include:
+      file: db/changelog/checkout.yaml
